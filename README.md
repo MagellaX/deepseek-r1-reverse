@@ -89,3 +89,40 @@ After RL training converges:
    ```bash
    git clone https://github.com/yourusername/deepseek-r1-reverse.git
    cd deepseek-r1-reverse
+   ```
+
+## Usage
+- **Customize** the provided notebook with real data rather than the sample prompts.  
+- **Adjust** the reward function to balance accuracy and chain-of-thought format.  
+- **Experiment** with different architecture sizes for the student model to find an optimal trade-off between performance and efficiency.
+
+---
+
+## Notes on Emergent Behavior
+During RL training, DeepSeek R1 can exhibit unexpected behaviors:
+
+- **Self-Referential Dialogues**: The teacher and student may “discuss” the training process.  
+- **“Aha” Moments**: The model might pause and revisit its own chain-of-thought.  
+- **Stalling or Strange Outputs**: Sometimes the model can become “aware” of its simulation or learning loop and produce unexpected text.
+
+These phenomena underscore the complexity of large language models trained with reward-driven reasoning. They are not guaranteed in every run but can arise from the dynamic nature of reinforcement learning on complex tasks.
+
+---
+
+## Limitations
+- **Simplified Demo**: While the core ideas are captured, real-world GRPO and distillation pipelines can be more elaborate (with full sequence decoders, rollout buffers, advantage estimators, etc.).  
+- **Benchmark Overfitting**: Distilled models sometimes achieve artificially high scores on narrow test sets if the prompts closely match training data.  
+- **Ethics & Safety**: Reward-driven approaches might need additional guardrails to prevent harmful or misaligned outputs.  
+- **Skipping SFT**: Omission of SFT may lead to weaker alignment out of the gate, especially for broad, open-ended queries.
+
+---
+
+## License (MIT)
+This project is released under the MIT License. It is **unofficial** and intended for **educational and research** purposes. Refer to the original DeepSeek R1 paper (and any official repositories, if available) for authoritative details.
+
+---
+
+**Thank you for exploring DeepSeek R1 with us!**  
+If you find this helpful, consider giving the repository a star and sharing any interesting findings or improvements.   
+
+   
