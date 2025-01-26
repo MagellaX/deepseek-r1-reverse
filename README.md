@@ -122,7 +122,7 @@ This project is released under the MIT License. It is **unofficial** and intende
 
 ---
 
-**Thank you for exploring DeepSeek R1 with us!**  
+**Thank you for exploring DeepSeek R1 with me!**  
 If you find this helpful, consider giving the repository a star and sharing any interesting findings or improvements.   
 
    
